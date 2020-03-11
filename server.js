@@ -1,8 +1,12 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
+
+var text = '{"id":"1", "name":"ilker"}';
+
+var employees = JSON.parse(text);
  
 app.get('/', function (req, res) {
-  res.send('Hello World')
+  res.send(employees);
 })
  
-app.listen(8080)
+app.listen(8080);
