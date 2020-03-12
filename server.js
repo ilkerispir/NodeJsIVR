@@ -20,7 +20,7 @@ app.get('/users', function (req, res) {
   let customer = employee[id];
   if(customer){
       customer.success = true;
-      res.json(customer);
+      res.status(200).json(customer);
   }else{
     res.status(404).json({success: false, message: "customer bulunamadı."})
   }
