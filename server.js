@@ -1,7 +1,8 @@
 const express = require('express');
+
 const app = express();
 
-var text = '{"id":"1", "name":"ilker"}';
+var text = '{"success":"true", "id":"1", "name":"ilker"}';
 
 var employees = JSON.parse(text);
  
@@ -10,3 +11,4 @@ app.get('/', function (req, res) {
 })
  
 app.listen(8080);
+
